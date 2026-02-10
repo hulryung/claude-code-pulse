@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Pulse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Titlebar -->
+    <div class="titlebar" id="titlebar">
+      <div class="titlebar-left">
+        <span class="app-icon">◉</span>
+        <span class="app-name">Claude Pulse</span>
+      </div>
+      <div class="titlebar-right">
+        <button class="titlebar-btn" id="btn-refresh" title="Refresh">↻</button>
+        <button class="titlebar-btn btn-close" id="btn-close" title="Close">×</button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content" id="content">
+      <!-- Loading State -->
+      <div class="state loading-state" id="loading-state">
+        <div class="spinner"></div>
+        <p>Fetching rate limits...</p>
+      </div>
+
+      <!-- Error State -->
+      <div class="state error-state hidden" id="error-state">
+        <div class="error-icon">⚠</div>
+        <p class="error-message" id="error-message"></p>
+        <div class="error-actions">
+          <button class="btn-login" id="btn-login">Login with Claude</button>
+          <button class="btn-retry" id="btn-retry">Retry</button>
+        </div>
+      </div>
+
+      <!-- Login In Progress State -->
+      <div class="state login-state hidden" id="login-state">
+        <div class="spinner"></div>
+        <p>Waiting for browser login...</p>
+        <p class="login-hint">Complete authorization in your browser</p>
+      </div>
+
+      <!-- Data Display -->
+      <div class="data-display hidden" id="data-display">
+        <!-- Status Badge -->
+        <div class="status-bar" id="status-bar">
+          <span class="status-dot" id="status-dot"></span>
+          <span class="status-text" id="status-text">Active</span>
+          <span class="status-bar-right">
+            <span class="plan-badge" id="plan-badge"></span>
+            <button class="btn-logout" id="btn-logout">Logout</button>
+          </span>
+        </div>
+
+        <!-- Rate Sections -->
+        <div class="rate-sections" id="rate-sections">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Local Stats -->
+        <div class="local-stats hidden" id="local-stats">
+          <div class="stats-header">Today's Activity <span class="stats-local-badge">local only</span></div>
+          <div class="stats-grid" id="stats-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Raw Headers Toggle -->
+        <div class="raw-section">
+          <button class="btn-raw-toggle" id="btn-raw-toggle">Show Raw Data</button>
+          <div class="raw-headers hidden" id="raw-headers">
+            <pre id="raw-headers-content"></pre>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+          <span class="last-updated" id="last-updated"></span>
+          <span class="auto-refresh-note">Auto-refresh: 2min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

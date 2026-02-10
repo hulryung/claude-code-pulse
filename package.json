@@ -1,0 +1,58 @@
+{
+  "name": "claude-pulse",
+  "version": "1.0.0",
+  "description": "Claude Code Rate Limit Monitor - Cross-platform desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --mock",
+    "debug": "electron . --debug",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:all": "electron-builder --mac --win"
+  },
+  "build": {
+    "appId": "com.claudepulse.app",
+    "productName": "Claude Pulse",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "assets/icon.png",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.png",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
+  },
+  "keywords": [
+    "claude",
+    "anthropic",
+    "rate-limit",
+    "monitor",
+    "claude-code"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^34.5.8",
+    "electron-builder": "^26.7.0",
+    "menubar": "^9.5.2"
+  }
+}
