@@ -22,16 +22,25 @@ Download the latest release from the [Releases page](https://github.com/hulryung
 
 ### macOS
 
-1. Download the `.dmg` file for your Mac:
-   - **Apple Silicon** (M1/M2/M3/M4): `Claude Pulse-x.x.x-arm64.dmg`
-   - **Intel**: `Claude Pulse-x.x.x.dmg`
-2. Open the `.dmg` and drag **Claude Pulse** to the **Applications** folder
+macOS builds are separate per architecture:
+
+| Chip | File |
+|------|------|
+| Apple Silicon (M1/M2/M3/M4) | `Claude-Pulse-x.x.x-mac-arm64.dmg` |
+| Intel | `Claude-Pulse-x.x.x-mac-x64.dmg` |
+
+1. Download the `.dmg` for your Mac
+2. Open it and drag **Claude Pulse** to the **Applications** folder
 3. Launch from Applications (you may need to right-click > Open on first launch)
 
 ### Windows
 
-- **Installer**: Download `Claude Pulse Setup x.x.x.exe` and run it
-- **Portable** (no install): Download `Claude Pulse x.x.x.exe` and run directly
+Windows builds include both x64 and arm64 in a single executable. The correct architecture is detected automatically at install time.
+
+| Type | File |
+|------|------|
+| Installer | `Claude-Pulse-Setup-x.x.x-win-x64+arm64.exe` |
+| Portable (no install) | `Claude-Pulse-x.x.x-win-x64+arm64-portable.exe` |
 
 ## Usage
 
