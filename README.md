@@ -57,6 +57,12 @@ Local activity stats are computed from Claude Code's conversation logs stored in
 - **OAuth 2.0 PKCE** - Secure authentication flow
 - **Anthropic Usage API** - Rate limit data source
 
+## Support
+
+If you find this useful, consider buying me a coffee!
+
+<a href="https://www.buymeacoffee.com/hulryung" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="180"></a>
+
 ## License
 
 MIT
