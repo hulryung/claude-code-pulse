@@ -8,9 +8,9 @@
     "dev": "electron . --mock",
     "debug": "electron . --debug",
     "build": "electron-builder",
-    "build:mac": "electron-builder --mac",
-    "build:win": "electron-builder --win",
-    "build:all": "electron-builder --mac --win"
+    "build:mac": "electron-builder --mac --arm64 --x64",
+    "build:win": "electron-builder --win --x64 --arm64",
+    "build:all": "electron-builder --mac --arm64 --x64 && electron-builder --win --x64 --arm64"
   },
   "build": {
     "appId": "com.claudepulse.app",
@@ -34,7 +34,7 @@
       ]
     },
     "win": {
-      "icon": "assets/icon.png",
+      "icon": "assets/icon.ico",
       "target": [
         "nsis",
         "portable"
