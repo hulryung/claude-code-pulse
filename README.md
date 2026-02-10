@@ -18,6 +18,35 @@ A lightweight menubar/tray app that monitors your [Claude Code](https://docs.ant
 
 ## Installation
 
+Download the latest release from the [Releases page](https://github.com/hulryung/claude-code-pulse/releases).
+
+### macOS
+
+1. Download the `.dmg` file for your Mac:
+   - **Apple Silicon** (M1/M2/M3/M4): `Claude Pulse-x.x.x-arm64.dmg`
+   - **Intel**: `Claude Pulse-x.x.x.dmg`
+2. Open the `.dmg` and drag **Claude Pulse** to the **Applications** folder
+3. Launch from Applications (you may need to right-click > Open on first launch)
+
+### Windows
+
+- **Installer**: Download `Claude Pulse Setup x.x.x.exe` and run it
+- **Portable** (no install): Download `Claude Pulse x.x.x.exe` and run directly
+
+## Usage
+
+### First Launch
+
+Click the tray icon to open the app. If you already have Claude Code installed and authenticated, the app will use your existing session automatically.
+
+Otherwise, click **Login with Claude** to authenticate via OAuth.
+
+### Right-click Menu
+
+Right-click the tray icon for quick actions: Show, Refresh Now, or Quit.
+
+### Development
+
 ```bash
 git clone https://github.com/hulryung/claude-code-pulse.git
 cd claude-code-pulse
@@ -25,25 +54,11 @@ npm install
 npm start
 ```
 
-## Usage
-
-### First Launch
-
-If you already have Claude Code installed and authenticated, the app will use your existing session automatically.
-
-Otherwise, click **Login with Claude** to authenticate via OAuth.
-
-### Scripts
-
 | Command | Description |
 |---------|-------------|
 | `npm start` | Launch the app |
-| `npm run dev` | Launch with mock data (for development) |
+| `npm run dev` | Launch with mock data |
 | `npm run debug` | Launch with raw API data panel visible |
-
-### Right-click Menu
-
-Right-click the tray icon for quick actions: Show, Refresh Now, or Quit.
 
 ## How It Works
 
